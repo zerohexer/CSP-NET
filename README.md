@@ -1,51 +1,54 @@
 # CSP-NET Starter Template
-**🚀 Professional C++ Web Development with Apple-Inspired Design**
+**Professional C++ Web Development with Apple-Inspired Design**
 
----
+## Overview
 
-## ✨ What is CSP-NET?
+CSP-NET is a professional starter template for building high-performance web applications using modern C++. It features enterprise-grade architecture patterns, Apple-inspired design, and production-ready code organization.
 
-CSP-NET is a **professional starter template** for building high-performance web applications using modern C++. It features enterprise-grade architecture patterns, Apple-inspired design, and production-ready code organization.
+### Ideal For:
+- Students learning modern C++ web development
+- Developers wanting lightning-fast web applications  
+- Companies needing high-performance platforms
+- Anyone who values clean architecture and elegant design
 
-### 🎯 Perfect For:
-- **Students** learning modern C++ web development
-- **Developers** wanting lightning-fast web applications  
-- **Companies** needing high-performance platforms
-- **Anyone** who values clean architecture and beautiful design
-
----
-
-## 🏗️ Architecture
+## Architecture
 
 **Clean Modular Design:**
-- **🏛️ MVC + SPA Pattern** - Industry-standard architecture
-- **🏗️ Builder Pattern** - Clean page construction  
-- **🧩 Factory Pattern** - Reusable UI components
-- **🎨 Design System** - Apple-inspired styling
-- **⚡ High Performance** - C++ compiled speed
+- **MVC + SPA Pattern** - Industry-standard architecture
+- **Builder Pattern** - Clean page construction  
+- **Factory Pattern** - Reusable UI components
+- **Design System** - Apple-inspired styling
+- **High Performance** - C++ compiled speed
 
-**Technologies:**
+**Core Technologies:**
 - **Wt Framework** - Modern C++ web UI toolkit
 - **Drogon Framework** - High-performance C++ backend
 - **Apple Design System** - Premium glassmorphism UI
 - **CMake** - Professional build system
 
----
+## Quick Start
 
-## 🚀 Quick Start
+### Prerequisites
 
-### 1. Prerequisites
+**Tested on openSUSE. Installation commands for reference:**
 ```bash
-# Ubuntu/Debian
+# openSUSE (tested)
+sudo zypper install gcc-c++ cmake libwt-devel libwthttp-devel
+
+# Ubuntu/Debian (untested)
 sudo apt-get install build-essential cmake libwt-dev libwthttp-dev libdrogon-dev
 
-# macOS
+# macOS (untested)
 brew install cmake wt drogon
 ```
 
-### 2. Build & Run
+### Build and Run
 ```bash
-# Clone/download CSP-NET
+# Clone the repository
+git clone https://github.com/zerohexer/CSP-NET.git
+cd CSP-NET
+
+# Build
 mkdir build && cd build
 cmake .. && make
 
@@ -53,66 +56,60 @@ cmake .. && make
 ./CSP_NET --docroot=../static --http-port=8080
 ```
 
-### 3. Open Browser
-Visit: **http://localhost:8080**
+### Access Application
+Open your browser and navigate to: **http://localhost:8080**
 
-You'll see a beautiful Apple-inspired web application! ✨
+You will see a professional Apple-inspired web application with smooth navigation.
 
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 CSP-NET/
-├── 📚 Documentation/
-│   ├── DEVELOPER_README.md       # 👈 START HERE - Quick customization guide
-│   ├── COMPLETE_GUIDE.md         # 📖 Comprehensive architecture guide  
-│   └── ARCHITECTURE_GUIDE.md     # 🏛️ Architecture overview
+├── Documentation/
+│   ├── DEVELOPER_README.md       # Quick customization guide
+│   ├── COMPLETE_GUIDE.md         # Comprehensive architecture guide  
+│   └── ARCHITECTURE_GUIDE.md     # Architecture overview
 │
-├── 💻 Source Code (src/)/
-│   ├── 🏗️ builders/              # Page construction (Builder pattern)
-│   ├── 🧩 components/            # Reusable UI components (Factory pattern)  
-│   ├── 🎨 styles/                # Design system & Apple theme
-│   ├── 🎮 controllers/           # Business logic (MVC pattern)
-│   ├── 📊 models/                # Data structures
-│   ├── 📱 views/                 # UI components & layouts
-│   └── 🎭 app/                   # Application core & routing
+├── Source Code (src/)/
+│   ├── builders/                 # Page construction (Builder pattern)
+│   ├── components/               # Reusable UI components (Factory pattern)  
+│   ├── styles/                   # Design system & Apple theme
+│   ├── controllers/              # Business logic (MVC pattern)
+│   ├── models/                   # Data structures
+│   ├── views/                    # UI components & layouts
+│   └── app/                      # Application core & routing
 │
-├── 🔧 Build Files/
+├── Build Files/
 │   ├── CMakeLists.txt            # Main build configuration
-│   └── build/                    # Compiled output
+│   └── build/                    # Compiled output (excluded from git)
 │
-└── 🗃️ Archive (Not USED/)/
-    └── (Outdated files moved here)
+└── Archive (Not USED/)/
+    └── (Outdated files for reference)
 ```
 
----
+## Features
 
-## 🎨 Features
-
-### **🎨 Apple-Inspired Design**
+### Apple-Inspired Design
 - **Glassmorphism Effects** - Modern transparent blur effects
-- **Premium Typography** - SF Pro font family with perfect spacing
+- **Premium Typography** - SF Pro font family with precise spacing
 - **Smooth Animations** - 60fps transitions and hover effects
-- **Responsive Layout** - Works beautifully on all devices
+- **Responsive Layout** - Optimized for all screen sizes
 
-### **⚡ High Performance**
-- **C++ Speed** - Orders of magnitude faster than JavaScript
+### High Performance
+- **C++ Speed** - Significantly faster than JavaScript frameworks
 - **Compiled Efficiency** - No runtime interpretation overhead
 - **Memory Safe** - RAII and smart pointers prevent leaks
 - **Type Safe** - Compile-time error checking
 
-### **🏗️ Professional Architecture**
+### Professional Architecture
 - **Clean Code** - Easy to understand and maintain
 - **Modular Design** - Add features without breaking existing code
 - **Reusable Components** - DRY principle throughout
 - **Enterprise Patterns** - Industry-standard design patterns
 
----
+## Customization
 
-## 🛠️ Customization
-
-### **Quick Changes**
+### Quick Changes
 ```cpp
 // Change colors - src/styles/AppleTheme.cpp
 "background: #007aff;"  // Change to your brand color
@@ -124,93 +121,78 @@ auto title = std::make_unique<Wt::WText>("Your App Name");
 ComponentFactory::createYourComponent(parent, "param1", "param2");
 ```
 
-### **Add New Pages**
+### Adding New Pages
 1. Create `src/builders/YourPageBuilder.cpp`
 2. Add to `CMakeLists.txt`
 3. Update `src/app/Application.cpp` routing
-4. Build and enjoy! 🎉
+4. Build and test
 
-**👉 See [DEVELOPER_README.md](./DEVELOPER_README.md) for step-by-step tutorials!**
+For detailed step-by-step tutorials, see [DEVELOPER_README.md](./DEVELOPER_README.md).
 
----
-
-## 📖 Documentation
+## Documentation
 
 | File | Purpose | Audience |
 |------|---------|----------|
-| **[DEVELOPER_README.md](./DEVELOPER_README.md)** | 🚀 Quick start & customization | Developers wanting to build |
-| **[COMPLETE_GUIDE.md](./COMPLETE_GUIDE.md)** | 📚 Comprehensive architecture guide | Learning the complete system |  
-| **[ARCHITECTURE_GUIDE.md](./ARCHITECTURE_GUIDE.md)** | 🏛️ Architecture overview | Understanding the design |
+| **[DEVELOPER_README.md](./DEVELOPER_README.md)** | Quick start & customization | Developers wanting to build |
+| **[COMPLETE_GUIDE.md](./COMPLETE_GUIDE.md)** | Comprehensive architecture guide | Learning the complete system |  
+| **[ARCHITECTURE_GUIDE.md](./ARCHITECTURE_GUIDE.md)** | Architecture overview | Understanding the design |
 
----
-
-## 🎯 Example Applications
+## Example Applications
 
 **What you can build with CSP-NET:**
 
-### **Business Websites**
-- Corporate portfolios with stunning design
+### Business Websites
+- Corporate portfolios with professional design
 - Service platforms with real-time features
 - E-commerce sites with high performance
 
-### **SaaS Applications**  
+### SaaS Applications  
 - Dashboard applications with complex UI
 - Data visualization platforms
 - API-driven web applications
 
-### **Portfolio Projects**
-- Personal websites that stand out
-- Technical blogs with modern design
+### Portfolio Projects
+- Personal websites with modern design
+- Technical blogs with clean layout
 - Project showcases with smooth animations
 
----
+## Performance Comparison
 
-## 🏆 Why Choose CSP-NET?
-
-### **🚀 Performance**
 ```
 JavaScript Framework:  ~100ms response time
 CSP-NET:               ~5ms response time
 ```
 
-### **💎 Quality**
+## Why Choose CSP-NET?
+
+### Quality
 - **Enterprise Architecture** - Patterns used by major tech companies
-- **Apple Design** - Premium UI that users love
+- **Apple Design** - Premium UI that users appreciate
 - **Type Safety** - Catch errors at compile time, not runtime
 - **Memory Efficiency** - No garbage collection overhead
 
-### **📈 Developer Experience**
+### Developer Experience
 - **Clear Documentation** - Everything explained step-by-step
 - **Modular Design** - Easy to understand and extend
 - **Professional Code** - Learn industry best practices
-- **Active Support** - Built for the community
+- **Comprehensive Examples** - Real-world implementation patterns
 
----
+## Contributing
 
-## 🤝 Contributing
+We welcome contributions:
+- **Bug reports** - Help us improve
+- **Feature requests** - Share your ideas  
+- **Documentation** - Make it even clearer
+- **Code contributions** - Build together
 
-We welcome contributions! Whether it's:
-- 🐛 **Bug reports** - Help us improve
-- ✨ **Feature requests** - Share your ideas  
-- 📖 **Documentation** - Make it even clearer
-- 💻 **Code contributions** - Build together
-
----
-
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](./LICENSE).
 
----
+## Getting Started
 
-## 🎉 Get Started Now!
+1. Star this repository if you find it useful
+2. Read [DEVELOPER_README.md](./DEVELOPER_README.md) for quick start
+3. Build something amazing with CSP-NET
 
-1. **⭐ Star this repository** if you find it useful
-2. **📖 Read [DEVELOPER_README.md](./DEVELOPER_README.md)** for quick start
-3. **🚀 Build something amazing** with CSP-NET!
-
----
-
-*Built with ❤️ for developers who demand performance and elegance.*
-
-**Happy Coding!** 🚀
+*Built for developers who demand performance and elegance.*
