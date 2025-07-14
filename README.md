@@ -30,17 +30,23 @@ CSP-NET is a professional starter template for building high-performance web app
 
 ### Prerequisites
 
-**Tested on openSUSE. Installation commands for reference:**
+**Frameworks Required:**
+- Wt Framework (Web UI toolkit)
+- Drogon Framework (High-performance backend)
+- CMake 3.16+ and C++17 compiler
+
+**Quick Install (openSUSE - tested):**
 ```bash
-# openSUSE (tested)
-sudo zypper install gcc-c++ cmake libwt-devel libwthttp-devel
+# Install Wt framework
+sudo zypper install gcc-c++ cmake wt-devel
 
-# Ubuntu/Debian (untested)
-sudo apt-get install build-essential cmake libwt-dev libwthttp-dev libdrogon-dev
-
-# macOS (untested)
-brew install cmake wt drogon
+# Install Drogon framework (requires manual compilation)
+git clone https://github.com/drogonframework/drogon.git
+cd drogon && git submodule update --init
+mkdir build && cd build && cmake .. && make -j$(nproc) && sudo make install
 ```
+
+**For detailed installation instructions for all platforms, see [INSTALLATION.md](./INSTALLATION.md)**
 
 ### Build and Run
 ```bash
@@ -133,6 +139,7 @@ For detailed step-by-step tutorials, see [DEVELOPER_README.md](./DEVELOPER_READM
 
 | File | Purpose | Audience |
 |------|---------|----------|
+| **[INSTALLATION.md](./INSTALLATION.md)** | Platform-specific installation instructions | Setting up development environment |
 | **[DEVELOPER_README.md](./DEVELOPER_README.md)** | Quick start & customization | Developers wanting to build |
 | **[COMPLETE_GUIDE.md](./COMPLETE_GUIDE.md)** | Comprehensive architecture guide | Learning the complete system |  
 | **[ARCHITECTURE_GUIDE.md](./ARCHITECTURE_GUIDE.md)** | Architecture overview | Understanding the design |
