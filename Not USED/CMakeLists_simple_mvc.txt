@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.28)
+project(CSP_NET_SIMPLE_MVC VERSION 1.0.0)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+message(STATUS "")
+message(STATUS "CSP-NET Simple MVC Configuration Summary:")
+message(STATUS "  Build type: ${CMAKE_BUILD_TYPE}")
+message(STATUS "  C++ standard: ${CMAKE_CXX_STANDARD}")
+message(STATUS "  Architecture: Simple MVC (Working)")
+message(STATUS "  Version: ${PROJECT_VERSION}")
+message(STATUS "")
+
+# Find required packages
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(WT REQUIRED wt wthttp)
+
+# Include directories
+include_directories(${WT_INCLUDE_DIRS})
+
+# Link directories
+link_directories(${WT_LIBRARY_DIRS})
+
+# Add compiler flags
+add_compile_options(${WT_CFLAGS_OTHER})
+
+# Create executable
+add_executable(CSP_NET_SIMPLE_MVC src/main_simple_mvc.cpp)
+
+# Link libraries
+target_link_libraries(CSP_NET_SIMPLE_MVC ${WT_LIBRARIES})
+
+# Set output directory
+set_target_properties(CSP_NET_SIMPLE_MVC PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
+)
+
+message(STATUS "Simple MVC build configured successfully")
+message(STATUS "Run: cmake --build . && ./CSP_NET_SIMPLE_MVC --http-address=127.0.0.1 --http-port=8080 --docroot=.")
