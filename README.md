@@ -1,15 +1,6 @@
-# CSP-NET Starter Template
-**Professional C++ Web Development with Apple-Inspired Design**
+# CSP-NET (Short Template about combining WtFramework + Drogon C++) - No Javacript development
 
 ## Overview
-
-CSP-NET is a professional starter template for building high-performance web applications using modern C++. It features enterprise-grade architecture patterns, Apple-inspired design, and production-ready code organization.
-
-### Ideal For:
-- Students learning modern C++ web development
-- Developers wanting lightning-fast web applications  
-- Companies needing high-performance platforms
-- Anyone who values clean architecture and elegant design
 
 ## Architecture
 
@@ -23,7 +14,6 @@ CSP-NET is a professional starter template for building high-performance web app
 **Core Technologies:**
 - **Wt Framework** - Modern C++ web UI toolkit
 - **Drogon Framework** - High-performance C++ backend
-- **Apple Design System** - Premium glassmorphism UI
 - **CMake** - Professional build system
 
 ## Quick Start
@@ -95,24 +85,6 @@ CSP-NET/
 
 ## Features
 
-### Apple-Inspired Design
-- **Glassmorphism Effects** - Modern transparent blur effects
-- **Premium Typography** - SF Pro font family with precise spacing
-- **Smooth Animations** - 60fps transitions and hover effects
-- **Responsive Layout** - Optimized for all screen sizes
-
-### High Performance
-- **C++ Speed** - Significantly faster than JavaScript frameworks
-- **Compiled Efficiency** - No runtime interpretation overhead
-- **Memory Safe** - RAII and smart pointers prevent leaks
-- **Type Safe** - Compile-time error checking
-
-### Professional Architecture
-- **Clean Code** - Easy to understand and maintain
-- **Modular Design** - Add features without breaking existing code
-- **Reusable Components** - DRY principle throughout
-- **Enterprise Patterns** - Industry-standard design patterns
-
 ## Customization
 
 ### Quick Changes
@@ -143,46 +115,6 @@ For detailed step-by-step tutorials, see [DEVELOPER_README.md](./DEVELOPER_READM
 | **[DEVELOPER_README.md](./DEVELOPER_README.md)** | Quick start & customization | Developers wanting to build |
 | **[COMPLETE_GUIDE.md](./COMPLETE_GUIDE.md)** | Comprehensive architecture guide | Learning the complete system |  
 | **[ARCHITECTURE_GUIDE.md](./ARCHITECTURE_GUIDE.md)** | Architecture overview | Understanding the design |
-
-## Example Applications
-
-**What you can build with CSP-NET:**
-
-### Business Websites
-- Corporate portfolios with professional design
-- Service platforms with real-time features
-- E-commerce sites with high performance
-
-### SaaS Applications  
-- Dashboard applications with complex UI
-- Data visualization platforms
-- API-driven web applications
-
-### Portfolio Projects
-- Personal websites with modern design
-- Technical blogs with clean layout
-- Project showcases with smooth animations
-
-## Performance Comparison
-
-```
-JavaScript Framework:  ~100ms response time
-CSP-NET:               ~5ms response time
-```
-
-## Why Choose CSP-NET?
-
-### Quality
-- **Enterprise Architecture** - Patterns used by major tech companies
-- **Apple Design** - Premium UI that users appreciate
-- **Type Safety** - Catch errors at compile time, not runtime
-- **Memory Efficiency** - No garbage collection overhead
-
-### Developer Experience
-- **Clear Documentation** - Everything explained step-by-step
-- **Modular Design** - Easy to understand and extend
-- **Professional Code** - Learn industry best practices
-- **Comprehensive Examples** - Real-world implementation patterns
 
 ## Contributing
 
